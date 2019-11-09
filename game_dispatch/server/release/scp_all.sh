@@ -1,0 +1,19 @@
+#scp -r -P 46578 /data/game66_dispatch/server/release/lobby_server/lobbyServer root@172.31.155.30:/data/game66_dispatch/server/release/lobby_server2/
+
+scp -r -P 46578 /data/game66_dispatch/server/release/dispatch_server/dispatchServer root@172.31.155.31:/data/game66_dispatch/server/release/dispatch_server/
+scp -r -P 46578 /data/game66_dispatch/server/release/lobby_server/lobbyServer root@172.31.155.31:/data/game66_dispatch/server/release/lobby_server/
+scp -r -P 46578 /data/game66_dispatch/server/release/robot_server/robotServer root@172.31.155.31:/data/game66_dispatch/server/release/robot_server/
+scp -r -P 46578 /data/game66_dispatch/server/release/bainiu_server/bainiuServer root@172.31.155.31:/data/game66_dispatch/server/release/bainiu_server/
+scp -r -P 46578 /data/game66_dispatch/server/release/two_people_majiang_server/majiangServer root@172.31.155.31:/data/game66_dispatch/server/release/two_people_majiang_server/
+scp -r -P 46578 /data/game66_dispatch/server/release/slot_server/slotServer root@172.31.155.31:/data/game66_dispatch/server/release/slot_server/
+scp -r -P 46578 /data/game66_dispatch/server/release/land_server/landServer root@172.31.155.31:/data/game66_dispatch/server/release/land_server/
+scp -r -P 46578 /data/game66_dispatch/server/release/war_server/warServer root@172.31.155.31:/data/game66_dispatch/server/release/war_server/
+scp -r -P 46578 /data/game66_dispatch/server/release/paijiu_server/paijiuServer root@172.31.155.31:/data/game66_dispatch/server/release/paijiu_server/
+scp -r -P 46578 /data/game66_dispatch/server/release/dice_server/diceServer root@172.31.155.31:/data/game66_dispatch/server/release/dice_server/
+scp -r -P 46578 /data/game66_dispatch/server/release/baccarat_server/baccaratServer root@172.31.155.31:/data/game66_dispatch/server/release/baccarat_server/
+scp -r -P 46578 /data/game66_dispatch/server/release/fight_server/fightServer root@172.31.155.31:/data/game66_dispatch/server/release/fight_server/
+scp -r -P 46578 /data/game66_dispatch/server/release/niuniu_server/niuniuServer root@172.31.155.31:/data/game66_dispatch/server/release/niuniu_server/
+scp -r -P 46578 /data/game66_dispatch/server/release/texas_server/texasServer root@172.31.155.31:/data/game66_dispatch/server/release/texas_server/
+scp -r -P 46578 /data/game66_dispatch/server/release/zajinhua_server/zajinhuaServer root@172.31.155.31:/data/game66_dispatch/server/release/zajinhua_server/
+scp -r -P 46578 /data/game66_dispatch/server/release/showhand_server/showhandServer root@172.31.155.31:/data/game66_dispatch/server/release/showhand_server/
+scp -r -P 46578 /data/game66_dispatch/server/release/robniu_server/robniuServer root@172.31.155.31:/data/game66_dispatch/server/release/robniu_server/

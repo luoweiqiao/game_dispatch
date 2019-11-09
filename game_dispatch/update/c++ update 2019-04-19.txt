@@ -1,0 +1,60 @@
+execution mysql structured query language:
+
+USE `chess_sysdata`;
+
+/*Table structure for table `room_stock_cfg` */
+
+DROP TABLE IF EXISTS `room_stock_cfg`;
+
+CREATE TABLE `room_stock_cfg` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '序号',
+  `gametype` tinyint(2) NOT NULL COMMENT '1斗地主,2梭哈',
+  `roomid` tinyint(3) NOT NULL COMMENT '房间ID',
+  `stock_min` bigint(12) NOT NULL COMMENT '库存下限',
+  `stock_max` bigint(12) NOT NULL COMMENT '库存上限',
+  `stock_conversion_rate` int(11) NOT NULL COMMENT '库存转化率',
+  `stock` bigint(12) NOT NULL COMMENT '实时库存',
+  `jackpot_min` bigint(12) NOT NULL COMMENT '奖池触发最低金额',
+  `jackpot_max_rate` int(11) NOT NULL COMMENT '奖池最大触发金额比例',
+  `jackpot_rate` int(11) NOT NULL COMMENT '奖池触发概率',
+  `jackpot_coefficient` int(11) NOT NULL COMMENT '奖池系数',
+  `jackpot_extract_rate` int(11) NOT NULL COMMENT '奖池抽取率',
+  `jackpot` bigint(12) NOT NULL COMMENT '实时奖池',
+  `fee` bigint(12) NOT NULL COMMENT '实时抽水',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='库存奖池配置表';
+
+
+DROP TABLE IF EXISTS `user_control_cfg`;
+
+CREATE TABLE `user_control_cfg` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `suid` int(11) NOT NULL COMMENT '超权id',
+  `snickname` varchar(50) NOT NULL COMMENT '超权账号昵称',
+  `sdeviceid` varchar(64) NOT NULL COMMENT '当前机器码',
+  `tuid` int(11) NOT NULL DEFAULT '0' COMMENT '跟踪id',
+  `cgid` text NOT NULL COMMENT '控制游戏id',
+  `skey` char(32) NOT NULL COMMENT '授权key',
+  `aname` varchar(20) NOT NULL COMMENT '操作管理员名字',
+  `utime` int(11) NOT NULL DEFAULT '0' COMMENT '操作时间',
+  PRIMARY KEY (`id`),
+  KEY `suid` (`suid`) USING BTREE,
+  KEY `tuid` (`tuid`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='点杀精准控制配置表';
+
+
+update file 47.52.103.72
+/data/game66_dispatch/server/release/dispatch_server/dispatchServer
+/data/game66_dispatch/server/release/lobby_server/lobbyServer
+/data/game66_dispatch/server/release/bainiu_server/bainiuServer
+/data/game66_dispatch/server/release/war_server/warServer
+/data/game66_dispatch/server/release/slot_server/slotServer
+/data/game66_dispatch/server/release/dice_server/diceServer
+/data/game66_dispatch/server/release/fight_server/fightServer
+/data/game66_dispatch/server/release/two_people_majiang_server/majiangServer
+/data/game66_dispatch/server/release/land_server/landServer
+/data/game66_dispatch/server/release/paijiu_server/paijiuServer
+/data/game66_dispatch/server/release/baccarat_server/baccaratServer
+/data/game66_dispatch/server/release/niuniu_server/niuniuServer
+/data/game66_dispatch/server/release/robot_server/robotServer
+

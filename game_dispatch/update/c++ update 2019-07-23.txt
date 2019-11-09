@@ -1,0 +1,121 @@
+execution mysql structured query language:
+
+USE `chess`;
+
+/*Table structure for table `game_fishing` */
+
+DROP TABLE IF EXISTS `game_fishing`;
+
+CREATE TABLE `game_fishing` (
+  `uid` int(11) NOT NULL COMMENT '用户ID',
+  `win` int(11) NOT NULL COMMENT '积分赢',
+  `lose` int(11) NOT NULL COMMENT '积分输',
+  `maxwin` bigint(20) NOT NULL COMMENT '积分最大赢',
+  `winc` int(11) NOT NULL COMMENT '财富币赢',
+  `losec` int(11) NOT NULL COMMENT '财富币输',
+  `maxwinc` bigint(20) NOT NULL COMMENT '财富币最大赢',
+  `maxcard` varchar(20) NOT NULL COMMENT '最大牌型',
+  `maxcardc` varchar(20) NOT NULL COMMENT '最大牌型',
+  `daywin` bigint(20) NOT NULL COMMENT '今日输赢',
+  `daywinc` bigint(20) NOT NULL COMMENT '进入输赢',
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `game_robniu`;
+
+CREATE TABLE `game_robniu` (
+  `uid` int(11) NOT NULL COMMENT '用户ID',
+  `win` int(11) NOT NULL COMMENT '积分赢',
+  `lose` int(11) NOT NULL COMMENT '积分输',
+  `maxwin` bigint(20) NOT NULL COMMENT '积分最大赢',
+  `winc` int(11) NOT NULL COMMENT '财富币赢',
+  `losec` int(11) NOT NULL COMMENT '财富币输',
+  `maxwinc` bigint(20) NOT NULL COMMENT '财富币最大赢',
+  `maxcard` varchar(20) NOT NULL COMMENT '最大牌型',
+  `maxcardc` varchar(20) NOT NULL COMMENT '最大牌型',
+  `daywin` bigint(20) NOT NULL COMMENT '今日输赢',
+  `daywinc` bigint(20) NOT NULL COMMENT '今日输赢',
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+USE `chess_sysdata`;
+
+/*Table structure for table `fish_cfg` */
+
+DROP TABLE IF EXISTS `fish_cfg`;
+
+CREATE TABLE `fish_cfg` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `prize_min` int(11) NOT NULL COMMENT '鱼最低奖励倍数',
+  `prize_max` int(11) NOT NULL COMMENT '鱼最高奖励倍数',
+  `kill_rate` int(11) NOT NULL COMMENT '鱼击杀概率万分比',
+  `aname` varchar(20) NOT NULL COMMENT '操作管理员名字',
+  `utime` int(11) NOT NULL DEFAULT '0' COMMENT '操作时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='捕鱼鱼群配置';
+
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (1,2,2,4850,'roo',1561022682);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (2,2,2,4850,'roo',1561022695);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (3,2,2,4850,'roo',1561022710);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (4,2,2,4850,'roo',1561022715);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (5,3,3,3233,'roo',1561022737);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (6,3,3,3233,'roo',1561022745);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (7,3,3,3233,'roo',1561022758);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (8,3,3,3233,'roo',1561022769);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (9,3,3,3233,'roo',1561022777);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (10,4,4,2425,'roo',1561022797);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (11,4,4,2425,'roo',1561022806);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (12,100,100,3333,'roo',1563187437);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (13,5,5,1940,'roo',1561022835);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (14,5,5,1940,'roo',1561022845);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (15,50,50,194,'roo',1561022867);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (16,80,80,121,'roo',1562834501);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (17,120,120,81,'roo',1561022909);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (18,50,50,194,'roo',1561022924);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (19,60,60,194,'roo',1561430474);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (20,70,70,138,'roo',1561022953);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (21,80,80,121,'roo',1561022965);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (22,30,30,323,'roo',1561022984);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (23,100,100,97,'roo',1561442307);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (24,150,150,64,'roo',1561023014);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (25,200,200,48,'roo',1561023031);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (26,250,250,38,'roo',1561023043);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (27,7,7,1385,'roo',1561023058);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (28,8,8,1212,'roo',1561023073);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (29,9,9,1077,'roo',1561023087);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (30,10,10,970,'roo',1561023117);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (31,12,12,808,'roo',1561023130);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (32,15,15,646,'roo',1561023157);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (33,18,18,538,'roo',1561023174);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (34,20,20,485,'roo',1561023188);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (35,25,25,388,'roo',1561023205);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (36,30,30,323,'roo',1561023219);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (37,35,35,277,'roo',1561023236);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (38,40,40,242,'roo',1561023248);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (39,45,45,215,'roo',1561023260);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (40,150,200,55,'roo',1561442317);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (41,350,350,27,'roo',1561461289);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (42,400,400,24,'roo',1561461299);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (43,300,300,32,'roo',1561461210);
+insert  into `fish_cfg`(`id`,`prize_min`,`prize_max`,`kill_rate`,`aname`,`utime`) values (44,100,150,77,'roo',1561023360);
+
+update file 47.52.103.72
+/data/game66_dispatch/server/release/dispatch_server/dispatchServer
+/data/game66_dispatch/server/release/lobby_server/lobbyServer
+/data/game66_dispatch/server/release/bainiu_server/bainiuServer
+/data/game66_dispatch/server/release/war_server/warServer
+/data/game66_dispatch/server/release/slot_server/slotServer
+/data/game66_dispatch/server/release/dice_server/diceServer
+/data/game66_dispatch/server/release/fight_server/fightServer
+/data/game66_dispatch/server/release/two_people_majiang_server/majiangServer
+/data/game66_dispatch/server/release/land_server/landServer
+/data/game66_dispatch/server/release/paijiu_server/paijiuServer
+/data/game66_dispatch/server/release/baccarat_server/baccaratServer
+/data/game66_dispatch/server/release/niuniu_server/niuniuServer
+/data/game66_dispatch/server/release/texas_server/texasServer
+/data/game66_dispatch/server/release/zajinhua_server/zajinhuaServer
+/data/game66_dispatch/server/release/robot_server/robotServer
+/data/game66_dispatch/server/release/showhand_server/showhandServer
+/data/game66_dispatch/server/release/fishing_server/fishingServer
+/data/game66_dispatch/server/release/robniu_server/robniuServer
+

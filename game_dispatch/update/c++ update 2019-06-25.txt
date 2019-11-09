@@ -1,0 +1,26 @@
+execution mysql structured query language:
+
+USE `chess_sysdata`;
+
+ALTER TABLE `chess_sysdata`.`room_stock_cfg` 
+ADD COLUMN `kill_points_line` bigint(12) NOT NULL default 0 COMMENT '杀分警戒线' AFTER `fee`,
+ADD COLUMN `player_win_rate` int(11) NOT NULL default 0 COMMENT '玩家赢概率' AFTER `kill_points_line`;
+
+
+update file 47.52.103.72
+/data/game66_dispatch/server/release/dispatch_server/dispatchServer
+/data/game66_dispatch/server/release/lobby_server/lobbyServer
+/data/game66_dispatch/server/release/bainiu_server/bainiuServer
+/data/game66_dispatch/server/release/war_server/warServer
+/data/game66_dispatch/server/release/slot_server/slotServer
+/data/game66_dispatch/server/release/dice_server/diceServer
+/data/game66_dispatch/server/release/fight_server/fightServer
+/data/game66_dispatch/server/release/two_people_majiang_server/majiangServer
+/data/game66_dispatch/server/release/land_server/landServer
+/data/game66_dispatch/server/release/paijiu_server/paijiuServer
+/data/game66_dispatch/server/release/baccarat_server/baccaratServer
+/data/game66_dispatch/server/release/niuniu_server/niuniuServer
+/data/game66_dispatch/server/release/texas_server/texasServer
+/data/game66_dispatch/server/release/zajinhua_server/zajinhuaServer
+/data/game66_dispatch/server/release/robot_server/robotServer
+/data/game66_dispatch/server/release/showhand_server/showhandServer
